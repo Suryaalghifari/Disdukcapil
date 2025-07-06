@@ -1,68 +1,47 @@
-# CodeIgniter 4 Application Starter
+# 🏛️ Sistem Informasi Disdukcapil Digital
 
-## What is CodeIgniter?
+Aplikasi layanan administrasi kependudukan berbasis web untuk Dinas Kependudukan dan Pencatatan Sipil (Disdukcapil).  
+Sistem ini dibangun menggunakan **CodeIgniter 4** dan mendukung pengajuan serta pembuatan dokumen digital seperti KTP, Akta Kelahiran, Akta Kematian, dan lainnya.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+---
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## ⚙️ Teknologi yang Digunakan
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+| Komponen    | Teknologi                   |
+| ----------- | --------------------------- |
+| Framework   | CodeIgniter 4               |
+| Backend     | PHP 8.x                     |
+| Database    | MySQL / MariaDB             |
+| PDF Library | DOMPDF                      |
+| Arsitektur  | MVC (Model View Controller) |
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+---
 
-## Installation & updates
+## 👥 Role Pengguna
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+- **👤 Warga**
+  - Registrasi dan verifikasi email
+  - Login sistem
+  - Pengajuan dokumen digital
+  - Lihat riwayat pengajuan
+  - Cetak dokumen PDF (akta, kartu, dll)
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+---
 
-## Setup
+## ✨ Fitur Utama
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+- 🔐 Registrasi & Login untuk Warga
+- 👨‍👩‍👧‍👦 Pengajuan Dokumen Digital:
+  - Akta Kelahiran
+  - Kartu Keluarga
+  - KTP (Kartu Tanda Penduduk)
+  - Keterangan Pindah
+  - Akta Kematian
+  - Akta Perkawinan
+  - Akta Perceraian
+  - Kartu Identitas Anak (KIA)
+- 🧾 Formulir Pengajuan Otomatis
+- 📄 Generate & Download PDF via **DOMPDF**
+- 📌 Riwayat Pengajuan & Status
 
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> The end of life date for PHP 7.4 was November 28, 2022.
-> The end of life date for PHP 8.0 was November 26, 2023.
-> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> The end of life date for PHP 8.1 will be November 25, 2024.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+---
